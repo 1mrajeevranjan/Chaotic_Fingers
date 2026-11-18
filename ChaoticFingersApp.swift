@@ -122,6 +122,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         applyVisibilitySettings()
         applyLoginItemSettings()
         applyAppearanceSettings()
+        GlobalHotKeys.register()
         showMainWindow()
 
         if !AXIsProcessTrusted() {
