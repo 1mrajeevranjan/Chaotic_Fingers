@@ -57,7 +57,6 @@ struct LandingView: View {
                 Image(nsImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .grayscale(1)
                     .opacity(0.10)
                     .clipped()
                     .accessibilityHidden(true)
