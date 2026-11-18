@@ -1,0 +1,50 @@
+[
+  {
+    "text": "keep",
+    "start": 0.05,
+    "end": 0.16,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.26,
+    "end": 0.39,
+    "id": "w1"
+  },
+  {
+    "text": "screen",
+    "start": 0.45,
+    "end": 0.84,
+    "id": "w2"
+  },
+  {
+    "text": "on",
+    "start": 0.84,
+    "end": 0.9,
+    "id": "w3"
+  },
+  {
+    "text": "and",
+    "start": 1.05,
+    "end": 1.16,
+    "id": "w4"
+  },
+  {
+    "text": "the",
+    "start": 1.16,
+    "end": 1.35,
+    "id": "w5"
+  },
+  {
+    "text": "inputs",
+    "start": 1.35,
+    "end": 1.73,
+    "id": "w6"
+  },
+  {
+    "text": "off.",
+    "start": 1.74,
+    "end": 1.95,
+    "id": "w7"
+  }
+]

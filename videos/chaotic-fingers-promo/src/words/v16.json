@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Chaotic",
+    "start": 0.1,
+    "end": 0.42,
+    "id": "w0"
+  },
+  {
+    "text": "Fingers,",
+    "start": 0.58,
+    "end": 1.05,
+    "id": "w1"
+  },
+  {
+    "text": "free",
+    "start": 1.35,
+    "end": 1.45,
+    "id": "w2"
+  },
+  {
+    "text": "for",
+    "start": 1.45,
+    "end": 1.67,
+    "id": "w3"
+  },
+  {
+    "text": "your",
+    "start": 1.67,
+    "end": 1.94,
+    "id": "w4"
+  },
+  {
+    "text": "Mac.",
+    "start": 1.95,
+    "end": 2.21,
+    "id": "w5"
+  }
+]

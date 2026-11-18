@@ -1,0 +1,44 @@
+[
+  {
+    "text": "Your",
+    "start": 0.04,
+    "end": 0.23,
+    "id": "w0"
+  },
+  {
+    "text": "toddler",
+    "start": 0.25,
+    "end": 0.62,
+    "id": "w1"
+  },
+  {
+    "text": "just",
+    "start": 0.67,
+    "end": 0.86,
+    "id": "w2"
+  },
+  {
+    "text": "found",
+    "start": 0.93,
+    "end": 1.15,
+    "id": "w3"
+  },
+  {
+    "text": "the",
+    "start": 1.2,
+    "end": 1.37,
+    "id": "w4"
+  },
+  {
+    "text": "keyboard.",
+    "start": 1.37,
+    "end": 2.04,
+    "id": "w5"
+  },
+  {
+    "text": "Again.",
+    "start": 2.08,
+    "end": 2.87,
+    "id": "w6"
+  }
+]
