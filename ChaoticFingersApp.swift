@@ -374,7 +374,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
         menu.addItem(menuItem("Dashboard", #selector(showMainWindow), symbol: "macwindow"))
 
-        let settings = menuItem("Settings…", #selector(openSettings), symbol: "gearshape")
+        // No attachment icon: macOS decorates the standard Settings item with
+        // its own gear, and adding one here renders two side by side.
+        let settings = NSMenuItem(title: "Settings…", action: #selector(openSettings), keyEquivalent: "")
+        settings.target = self
         settings.keyEquivalent = ","
         settings.keyEquivalentModifierMask = .command
         menu.addItem(settings)
