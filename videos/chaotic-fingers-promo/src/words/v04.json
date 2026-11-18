@@ -1,0 +1,50 @@
+[
+  {
+    "text": "and",
+    "start": 0.05,
+    "end": 0.2,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.24,
+    "end": 0.46,
+    "id": "w1"
+  },
+  {
+    "text": "cat",
+    "start": 0.46,
+    "end": 0.61,
+    "id": "w2"
+  },
+  {
+    "text": "asleep",
+    "start": 0.85,
+    "end": 1.16,
+    "id": "w3"
+  },
+  {
+    "text": "on",
+    "start": 1.16,
+    "end": 1.31,
+    "id": "w4"
+  },
+  {
+    "text": "the",
+    "start": 1.31,
+    "end": 1.54,
+    "id": "w5"
+  },
+  {
+    "text": "space",
+    "start": 1.54,
+    "end": 1.92,
+    "id": "w6"
+  },
+  {
+    "text": "bar.",
+    "start": 1.92,
+    "end": 2.21,
+    "id": "w7"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "text": "half",
+    "start": 0.08,
+    "end": 0.2,
+    "id": "w0"
+  },
+  {
+    "text": "an",
+    "start": 0.28,
+    "end": 0.35,
+    "id": "w1"
+  },
+  {
+    "text": "email",
+    "start": 0.35,
+    "end": 0.66,
+    "id": "w2"
+  },
+  {
+    "text": "goes",
+    "start": 0.66,
+    "end": 0.9,
+    "id": "w3"
+  },
+  {
+    "text": "out.",
+    "start": 0.9,
+    "end": 1.28,
+    "id": "w4"
+  }
+]

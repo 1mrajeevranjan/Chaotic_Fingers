@@ -1,0 +1,50 @@
+[
+  {
+    "text": "and",
+    "start": 0.05,
+    "end": 0.2,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.2,
+    "end": 0.4,
+    "id": "w1"
+  },
+  {
+    "text": "last",
+    "start": 0.4,
+    "end": 0.67,
+    "id": "w2"
+  },
+  {
+    "text": "resort,",
+    "start": 0.67,
+    "end": 1.28,
+    "id": "w3"
+  },
+  {
+    "text": "escape,",
+    "start": 1.31,
+    "end": 1.76,
+    "id": "w4"
+  },
+  {
+    "text": "escape,",
+    "start": 1.83,
+    "end": 2.2,
+    "id": "w5"
+  },
+  {
+    "text": "return,",
+    "start": 2.37,
+    "end": 2.92,
+    "id": "w6"
+  },
+  {
+    "text": "return.",
+    "start": 2.97,
+    "end": 3.41,
+    "id": "w7"
+  }
+]

@@ -1,0 +1,61 @@
+<template>
+<style>
+#root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter', sans-serif; color: #1D1D1F; background: #F5F5F7; -webkit-font-smoothing: antialiased; }
+.stage { position: absolute; left: 60px; top: 56px; width: 960px; height: 800px; display: flex; align-items: center; justify-content: center; }
+.fill { position: absolute; inset: 0; }
+.sym { display: inline-block; flex: none; background: currentColor; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; }
+.cursor { position: absolute; left: 0; top: 0; z-index: 50; filter: drop-shadow(0 3px 4px rgba(0,0,0,.3)); }
+.title { font-weight: 900; font-size: 84px; letter-spacing: -0.03em; line-height: 1.04; text-align: center; text-wrap: balance; }
+.title .w { display: inline-block; }
+.note { font-weight: 700; font-size: 34px; letter-spacing: -0.01em; color: #6E6E73; text-align: center; }
+.tl3 { position: absolute; left: 16px; top: 13px; display: flex; gap: 9px; z-index: 3; }
+.tl3 i { width: 13px; height: 13px; border-radius: 50%; background: #FF5F57; box-shadow: inset 0 0 0 .5px rgba(0,0,0,.12); }
+.tl3 i:nth-child(2) { background: #FEBC2E; } .tl3 i:nth-child(3) { background: #DCDCDC; }
+.mwin .tl3 { top: 21px; left: 22px; gap: 10px; } .mwin .tl3 i { width: 15px; height: 15px; }
+.mwin { background: #fff; border-radius: 16px; box-shadow: 0 30px 80px rgba(0,0,0,.18), 0 0 0 1px rgba(0,0,0,.08); overflow: hidden; position: relative; }
+.mbar { height: 56px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 24px; color: #3a3a3c; border-bottom: 1px solid #E6E6E6; position: relative; }
+/* physical keycap: base skirt + cap that travels 8px on a press */
+.key { position: relative; height: 140px; width: var(--kw, 140px); flex: none; }
+.key .base { position: absolute; inset: 10px 0 -10px 0; border-radius: 24px; background: #C7C7CC; box-shadow: 0 26px 40px rgba(0,0,0,.16); }
+.key .cap { position: absolute; inset: 0; border-radius: 24px; background: linear-gradient(#FFFFFF, #F2F2F4); border: 2px solid #D2D2D7; display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 700; font-size: 32px; color: #1D1D1F; }
+.key .cap .lg { font-size: 44px; font-weight: 400; }
+.key .cap.small { justify-content: flex-start; align-items: flex-end; padding: 0 0 18px 22px; font-size: 26px; font-weight: 400; }
+/* the real dashboard at 1pt = 1px; .dash scales it by zoom so text stays crisp */
+.dash { zoom: var(--z, 1.6); }
+.dwin { width: 480px; height: 480px; background: #fff; border-radius: 16px; overflow: hidden; position: relative; box-shadow: 0 18px 50px rgba(0,0,0,.18), 0 0 0 .6px rgba(0,0,0,.1); }
+.dhead { position: absolute; left: 0; top: 0; width: 480px; height: 182px; border-bottom: 1px solid #E6E6E6; overflow: hidden; }
+.dhead .tex { position: absolute; inset: 0; background-size: 320px; background-position: center; }
+.dttl { position: absolute; top: 9px; width: 100%; text-align: center; font-weight: 700; font-size: 13px; }
+.tile { background: linear-gradient(#EDEDED, #BCBCBC); border-radius: 22.5%; box-shadow: 0 1px 3px rgba(0,0,0,.18), inset 0 0 0 .5px rgba(0,0,0,.08); }
+.dtile { position: absolute; left: 213px; top: 58px; width: 54px; height: 54px; } .dicon { position: absolute; left: 6px; top: 6px; width: 42px; height: 42px; }
+.dname { position: absolute; top: 118px; width: 100%; text-align: center; font-weight: 700; font-size: 15px; }
+.dsub { position: absolute; top: 142px; width: 100%; text-align: center; font-size: 9.6px; color: #8A8A8E; }
+.seg { position: absolute; left: 20px; top: 203px; width: 440px; height: 24px; border-radius: 6px; background: #ECECEC; display: flex; }
+.seg b { flex: 1; display: flex; align-items: center; justify-content: center; font-weight: 400; font-size: 12.5px; position: relative; z-index: 1; }
+.seg .pill { position: absolute; left: 0; top: 0; width: 146.7px; height: 24px; border-radius: 6px; background: #3375F0; }
+.seg b.on { color: #fff; }
+.card { position: absolute; left: 20px; top: 247px; width: 440px; height: 135px; border: 1px solid #E6E6E6; border-radius: 9px; background: #fff; }
+.card .lay { position: absolute; inset: 0; }
+.chead { position: absolute; left: 13px; top: 14px; display: flex; gap: 13px; align-items: flex-start; }
+.chead .sym { width: 31px; height: 22px; color: #7a7a7e; margin-top: 2px; }
+.ct { font-weight: 700; font-size: 11.5px; } .cd { font-size: 9.6px; color: #8A8A8E; margin-top: 4px; }
+.crule { position: absolute; left: 12px; right: 12px; top: 55px; height: 1px; background: #E6E6E6; }
+.row { position: absolute; left: 13px; display: flex; align-items: center; gap: 12px; font-size: 9.8px; }
+.row .sym { width: 10px; height: 10px; }
+.btn { position: absolute; left: 20px; top: 432px; width: 440px; height: 28px; border-radius: 14px; background: #3478F6; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12.5px; }
+.btn .lab { position: absolute; }
+.status { position: absolute; left: 20px; top: 394px; width: 440px; height: 28px; border-radius: 8px; background: #FFF5E8; border: 1px solid #F6C98A; display: flex; align-items: center; gap: 8px; padding: 0 12px; font-size: 10px; color: #6b4a14; }
+.status b { font-weight: 700; } .status .sym { width: 15px; height: 11px; color: #FF9500; }
+.title { font-size: 128px; }</style>
+<div id="root" data-composition-id="claim" data-width="1080" data-height="1080">
+<div class="fill" style="background:url('assets/img/both_bg.png') center/700px;opacity:.07"></div>
+<div class="stage"><div class="title"><span class="w" id="cl-w0" style="opacity:0">Screen</span> <span class="w" id="cl-w1" style="opacity:0">on.</span><br><span class="w" id="cl-w2" style="opacity:0;color:#3478F6">Inputs</span> <span class="w" id="cl-w3" style="opacity:0;color:#3478F6">off.</span></div></div>
+</div>
+<script>
+(function () {
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#cl-w0",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.13,ease:"power2.out"},0.200);tl.fromTo("#cl-w1",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.13,ease:"power2.out"},0.590);tl.fromTo("#cl-w2",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.13,ease:"power2.out"},1.100);tl.fromTo("#cl-w3",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.13,ease:"power2.out"},1.490);
+  window.__timelines["claim"] = tl;
+})();
+</script>
+</template>

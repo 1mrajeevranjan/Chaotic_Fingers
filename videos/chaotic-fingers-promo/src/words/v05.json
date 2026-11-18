@@ -1,0 +1,62 @@
+[
+  {
+    "text": "Chaotic",
+    "start": 0.08,
+    "end": 0.4,
+    "id": "w0"
+  },
+  {
+    "text": "Fingers",
+    "start": 0.48,
+    "end": 0.84,
+    "id": "w1"
+  },
+  {
+    "text": "locks",
+    "start": 0.84,
+    "end": 1.14,
+    "id": "w2"
+  },
+  {
+    "text": "your",
+    "start": 1.14,
+    "end": 1.38,
+    "id": "w3"
+  },
+  {
+    "text": "keyboard",
+    "start": 1.38,
+    "end": 1.88,
+    "id": "w4"
+  },
+  {
+    "text": "and",
+    "start": 1.88,
+    "end": 2.14,
+    "id": "w5"
+  },
+  {
+    "text": "trackpad",
+    "start": 2.14,
+    "end": 2.84,
+    "id": "w6"
+  },
+  {
+    "text": "in",
+    "start": 2.85,
+    "end": 2.99,
+    "id": "w7"
+  },
+  {
+    "text": "one",
+    "start": 2.99,
+    "end": 3.18,
+    "id": "w8"
+  },
+  {
+    "text": "click.",
+    "start": 3.22,
+    "end": 3.6,
+    "id": "w9"
+  }
+]

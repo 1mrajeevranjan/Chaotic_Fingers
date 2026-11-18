@@ -1,0 +1,50 @@
+[
+  {
+    "text": "Shortcuts",
+    "start": 0.07,
+    "end": 0.79,
+    "id": "w0"
+  },
+  {
+    "text": "to",
+    "start": 0.79,
+    "end": 0.87,
+    "id": "w1"
+  },
+  {
+    "text": "Shift,",
+    "start": 1.19,
+    "end": 1.55,
+    "id": "w2"
+  },
+  {
+    "text": "Command,",
+    "start": 1.62,
+    "end": 2.35,
+    "id": "w3"
+  },
+  {
+    "text": "K,",
+    "start": 2.42,
+    "end": 2.61,
+    "id": "w4"
+  },
+  {
+    "text": "T,",
+    "start": 2.61,
+    "end": 2.85,
+    "id": "w5"
+  },
+  {
+    "text": "or",
+    "start": 2.85,
+    "end": 3.03,
+    "id": "w6"
+  },
+  {
+    "text": "B.",
+    "start": 3.03,
+    "end": 3.2,
+    "id": "w7"
+  }
+]

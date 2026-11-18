@@ -1,0 +1,44 @@
+[
+  {
+    "text": "pick",
+    "start": 0.02,
+    "end": 0.2,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.26,
+    "end": 0.39,
+    "id": "w1"
+  },
+  {
+    "text": "keyboard,",
+    "start": 0.42,
+    "end": 1,
+    "id": "w2"
+  },
+  {
+    "text": "the",
+    "start": 1.02,
+    "end": 1.19,
+    "id": "w3"
+  },
+  {
+    "text": "trackpad,",
+    "start": 1.19,
+    "end": 1.81,
+    "id": "w4"
+  },
+  {
+    "text": "or",
+    "start": 1.85,
+    "end": 1.96,
+    "id": "w5"
+  },
+  {
+    "text": "both.",
+    "start": 1.96,
+    "end": 2.28,
+    "id": "w6"
+  }
+]

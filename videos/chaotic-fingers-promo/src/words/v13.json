@@ -1,0 +1,44 @@
+[
+  {
+    "text": "Nothing",
+    "start": 0.05,
+    "end": 0.53,
+    "id": "w0"
+  },
+  {
+    "text": "is",
+    "start": 0.53,
+    "end": 0.68,
+    "id": "w1"
+  },
+  {
+    "text": "recorded,",
+    "start": 0.68,
+    "end": 1.46,
+    "id": "w2"
+  },
+  {
+    "text": "nothing",
+    "start": 1.5,
+    "end": 1.9,
+    "id": "w3"
+  },
+  {
+    "text": "leaves",
+    "start": 1.9,
+    "end": 2.27,
+    "id": "w4"
+  },
+  {
+    "text": "your",
+    "start": 2.27,
+    "end": 2.52,
+    "id": "w5"
+  },
+  {
+    "text": "Mac.",
+    "start": 2.52,
+    "end": 2.76,
+    "id": "w6"
+  }
+]

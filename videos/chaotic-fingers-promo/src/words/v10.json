@@ -1,0 +1,74 @@
+[
+  {
+    "text": "Window",
+    "start": 0.04,
+    "end": 0.33,
+    "id": "w0"
+  },
+  {
+    "text": "hidden.",
+    "start": 0.38,
+    "end": 1,
+    "id": "w1"
+  },
+  {
+    "text": "Hold",
+    "start": 1.04,
+    "end": 1.25,
+    "id": "w2"
+  },
+  {
+    "text": "both",
+    "start": 1.25,
+    "end": 1.49,
+    "id": "w3"
+  },
+  {
+    "text": "shift",
+    "start": 1.49,
+    "end": 1.7,
+    "id": "w4"
+  },
+  {
+    "text": "keys",
+    "start": 1.7,
+    "end": 2.08,
+    "id": "w5"
+  },
+  {
+    "text": "for",
+    "start": 2.08,
+    "end": 2.25,
+    "id": "w6"
+  },
+  {
+    "text": "three",
+    "start": 2.25,
+    "end": 2.56,
+    "id": "w7"
+  },
+  {
+    "text": "seconds",
+    "start": 2.56,
+    "end": 3.03,
+    "id": "w8"
+  },
+  {
+    "text": "and",
+    "start": 3.04,
+    "end": 3.19,
+    "id": "w9"
+  },
+  {
+    "text": "you're",
+    "start": 3.19,
+    "end": 3.49,
+    "id": "w10"
+  },
+  {
+    "text": "back.",
+    "start": 3.49,
+    "end": 3.86,
+    "id": "w11"
+  }
+]

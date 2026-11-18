@@ -4,3 +4,10 @@
 /Chaotic Fingers.app
 /*.dmg
 .swiftpm/
+/build
+xcuserdata/
+videos/*/.hyperframes/
+videos/*/renders/
+videos/*/snapshots/
+videos/*/.thumbnails/
+videos/*/.waveform-cache/

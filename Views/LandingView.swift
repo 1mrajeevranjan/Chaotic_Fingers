@@ -305,7 +305,7 @@ struct LandingView: View {
         case .none:     return nil
         }
 
-        guard let path = Bundle.module.path(forResource: name, ofType: "png"),
+        guard let path = Bundle.main.path(forResource: name, ofType: "png"),
               let image = NSImage(contentsOfFile: path) else { return nil }
 
         imageCache[mode] = image
