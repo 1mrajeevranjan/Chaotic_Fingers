@@ -7,17 +7,17 @@ import Foundation
 /// nowhere.
 enum AppLinks {
     /// Product page. Also what "Share App" hands to the share sheet.
-    static let website: URL? = nil
+    static let website = URL(string: "https://www.mishorastudio.com/apps/chaotic-fingers")
 
     /// Frequently asked questions.
-    static let faq: URL? = nil
+    static let faq = URL(string: "https://www.mishorastudio.com/apps/chaotic-fingers#faq")
 
     /// Support contact — a web form, or `mailto:you@example.com`.
-    static let support: URL? = nil
+    static let support = URL(string: "https://www.mishorastudio.com/contact")
 
-    /// App Store listing, e.g. `macappstore://apps.apple.com/app/id123456789`.
-    static let rateApp: URL? = nil
+    /// Where people leave a rating. Not on the App Store, so the product page.
+    static let rateApp = URL(string: "https://www.mishorastudio.com/apps/chaotic-fingers")
 
     /// Your other apps — a developer page or App Store profile.
-    static let moreApps: URL? = nil
+    static let moreApps = URL(string: "https://www.mishorastudio.com/apps")
 }
