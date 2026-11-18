@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		055AA82C1A257C369A4DD4A5 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 07F922E40983FC985E367F41 /* AppIcon.icns */; };
+		0723B67D20BD1947D0271926 /* FilledSegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FF730068ACBADEEA95E6C /* FilledSegmentedPicker.swift */; };
+		0AFDCD3C0136EE490B73B5C0 /* AppSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180E0EAF0DC93C32DAF3798 /* AppSetup.swift */; };
+		1194C3A534B65818B54ED762 /* StatusOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FB1B9E42CDD00C877B89A /* StatusOverlayView.swift */; };
+		21E83001DAFCCB9389C2FBCB /* both_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C31D74A3D833500E753188 /* both_bg.png */; };
+		51D72D0F6CED85EE5B03C5A6 /* trackpad_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 276EF3C62948A6592D5A1150 /* trackpad_bg.png */; };
+		54304F37AD761097C7248255 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6969AD42C4AD2E1F5B5334D /* AppTheme.swift */; };
+		547950194531752F14C11FB4 /* GestureLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183F6B5C30453E549596A78 /* GestureLogic.swift */; };
+		5706AC2BEC590D5FFF4664B9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA38F48F9BCA4D600745C5 /* SettingsView.swift */; };
+		587FC7A0B779CABEA90A8DBF /* libChaoticFingersCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DA96AC9759323C38E2A50B /* libChaoticFingersCore.a */; };
+		75A7CC27862645194EA9BDDC /* GestureDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6808292BBABC93FDBB78739A /* GestureDetector.swift */; };
+		775823B1A99D391B2D7222EF /* AppCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56423DDADD5337B90082951A /* AppCommands.swift */; };
+		7D745325913A04168915D282 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EF0EDBFB4DA3E792673C26 /* OnboardingView.swift */; };
+		8CFBC6A105AC75FFAB4F4064 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3239022B77017D229EE1F /* LandingView.swift */; };
+		B5B08D379AC52A6CDB17D6E5 /* keyboard_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 282C2F1524FDB1B2255DD620 /* keyboard_bg.png */; };
+		BB3C50539F013A2521E9C318 /* InputBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A286C496C10C67087EAFBF8 /* InputBlocker.swift */; };
+		BDDFF422C77601F6C5CC2EB8 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2C5CE8EA957E47C787612 /* AppAppearance.swift */; };
+		E01C7E0C1658D223F9AAF3C6 /* AppLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F7F5C234FE2FC74C5B3F9D /* AppLinks.swift */; };
+		ECA69BADEE516E43816739F5 /* ChaoticFingersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5970F5AF118602B634FAC4D9 /* ChaoticFingersApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		900D7C0CF3A532A65B376CAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E058160575E1DEC971013F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 944733581290E2A63C958DEE;
+			remoteInfo = ChaoticFingersCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F922E40983FC985E367F41 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		1A286C496C10C67087EAFBF8 /* InputBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBlocker.swift; sourceTree = "<group>"; };
+		2180E0EAF0DC93C32DAF3798 /* AppSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetup.swift; sourceTree = "<group>"; };
+		276EF3C62948A6592D5A1150 /* trackpad_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trackpad_bg.png; sourceTree = "<group>"; };
+		282C2F1524FDB1B2255DD620 /* keyboard_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_bg.png; sourceTree = "<group>"; };
+		4DF2C5CE8EA957E47C787612 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		56423DDADD5337B90082951A /* AppCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommands.swift; sourceTree = "<group>"; };
+		5970F5AF118602B634FAC4D9 /* ChaoticFingersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaoticFingersApp.swift; sourceTree = "<group>"; };
+		60DA96AC9759323C38E2A50B /* libChaoticFingersCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaoticFingersCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		632FB1B9E42CDD00C877B89A /* StatusOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOverlayView.swift; sourceTree = "<group>"; };
+		6808292BBABC93FDBB78739A /* GestureDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureDetector.swift; sourceTree = "<group>"; };
+		7183F6B5C30453E549596A78 /* GestureLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureLogic.swift; sourceTree = "<group>"; };
+		77E9C1A78E661BE922E1A3C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		80EF0EDBFB4DA3E792673C26 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		88C31D74A3D833500E753188 /* both_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = both_bg.png; sourceTree = "<group>"; };
+		93F7F5C234FE2FC74C5B3F9D /* AppLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinks.swift; sourceTree = "<group>"; };
+		97E074C571BC8B80A0568B16 /* Chaotic Fingers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chaotic Fingers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFDA38F48F9BCA4D600745C5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BFB3239022B77017D229EE1F /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		C6969AD42C4AD2E1F5B5334D /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		DA6FF730068ACBADEEA95E6C /* FilledSegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledSegmentedPicker.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8C7B26183AFDA94EF8E14E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587FC7A0B779CABEA90A8DBF /* libChaoticFingersCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1598515B5A0B135EE45989AE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				93F7F5C234FE2FC74C5B3F9D /* AppLinks.swift */,
+				2180E0EAF0DC93C32DAF3798 /* AppSetup.swift */,
+				DA6FF730068ACBADEEA95E6C /* FilledSegmentedPicker.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		19034EED4EEDB7152D56C333 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				4DF2C5CE8EA957E47C787612 /* AppAppearance.swift */,
+				C6969AD42C4AD2E1F5B5334D /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		359005B416D8D214386FFB6B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7183F6B5C30453E549596A78 /* GestureLogic.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		391134A012AB851A38C37A6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFB3239022B77017D229EE1F /* LandingView.swift */,
+				80EF0EDBFB4DA3E792673C26 /* OnboardingView.swift */,
+				632FB1B9E42CDD00C877B89A /* StatusOverlayView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2C9A193CF718C4BD5C4927D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97E074C571BC8B80A0568B16 /* Chaotic Fingers.app */,
+				60DA96AC9759323C38E2A50B /* libChaoticFingersCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1CAB74542CB7C1755936953 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07F922E40983FC985E367F41 /* AppIcon.icns */,
+				88C31D74A3D833500E753188 /* both_bg.png */,
+				282C2F1524FDB1B2255DD620 /* keyboard_bg.png */,
+				276EF3C62948A6592D5A1150 /* trackpad_bg.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CB6788C5DB2C1AB1EEBB944F = {
+			isa = PBXGroup;
+			children = (
+				56423DDADD5337B90082951A /* AppCommands.swift */,
+				5970F5AF118602B634FAC4D9 /* ChaoticFingersApp.swift */,
+				77E9C1A78E661BE922E1A3C9 /* Info.plist */,
+				AFDA38F48F9BCA4D600745C5 /* SettingsView.swift */,
+				359005B416D8D214386FFB6B /* Core */,
+				C1CAB74542CB7C1755936953 /* Resources */,
+				D25CD28F0D8FD126F2ACDC2A /* Services */,
+				19034EED4EEDB7152D56C333 /* Theme */,
+				1598515B5A0B135EE45989AE /* Utilities */,
+				391134A012AB851A38C37A6F /* Views */,
+				A2C9A193CF718C4BD5C4927D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D25CD28F0D8FD126F2ACDC2A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6808292BBABC93FDBB78739A /* GestureDetector.swift */,
+				1A286C496C10C67087EAFBF8 /* InputBlocker.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D46FD9AA0C4998440E54C61 /* ChaoticFingers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44B582326EE006D5F2C10B82 /* Build configuration list for PBXNativeTarget "ChaoticFingers" */;
+			buildPhases = (
+				02103950D70E2C24D9C8B23B /* Sources */,
+				FFC61C06626DC546D1596A0F /* Resources */,
+				A8C7B26183AFDA94EF8E14E5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C8B509028F344F2A5779CCD /* PBXTargetDependency */,
+			);
+			name = ChaoticFingers;
+			packageProductDependencies = (
+			);
+			productName = ChaoticFingers;
+			productReference = 97E074C571BC8B80A0568B16 /* Chaotic Fingers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		944733581290E2A63C958DEE /* ChaoticFingersCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2998AB527DF540217F601DA /* Build configuration list for PBXNativeTarget "ChaoticFingersCore" */;
+			buildPhases = (
+				2BA6D87E10150F36B7308775 /* Sources */,
+				E025AB47077D57F5886CEC5B /* Copy Swift Objective-C Interface Header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChaoticFingersCore;
+			packageProductDependencies = (
+			);
+			productName = ChaoticFingersCore;
+			productReference = 60DA96AC9759323C38E2A50B /* libChaoticFingersCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E058160575E1DEC971013F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2D46FD9AA0C4998440E54C61 = {
+						DevelopmentTeam = SG8NYPLMNY;
+						ProvisioningStyle = Automatic;
+					};
+					944733581290E2A63C958DEE = {
+						DevelopmentTeam = SG8NYPLMNY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2A05B092B255E33A288930A3 /* Build configuration list for PBXProject "ChaoticFingers" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CB6788C5DB2C1AB1EEBB944F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A2C9A193CF718C4BD5C4927D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D46FD9AA0C4998440E54C61 /* ChaoticFingers */,
+				944733581290E2A63C958DEE /* ChaoticFingersCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFC61C06626DC546D1596A0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				055AA82C1A257C369A4DD4A5 /* AppIcon.icns in Resources */,
+				21E83001DAFCCB9389C2FBCB /* both_bg.png in Resources */,
+				B5B08D379AC52A6CDB17D6E5 /* keyboard_bg.png in Resources */,
+				51D72D0F6CED85EE5B03C5A6 /* trackpad_bg.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E025AB47077D57F5886CEC5B /* Copy Swift Objective-C Interface Header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(DERIVED_SOURCES_DIR)/$(SWIFT_OBJC_INTERFACE_HEADER_NAME)",
+			);
+			name = "Copy Swift Objective-C Interface Header";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/include/$(PRODUCT_MODULE_NAME)/$(SWIFT_OBJC_INTERFACE_HEADER_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ditto \"${SCRIPT_INPUT_FILE_0}\" \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02103950D70E2C24D9C8B23B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDDFF422C77601F6C5CC2EB8 /* AppAppearance.swift in Sources */,
+				775823B1A99D391B2D7222EF /* AppCommands.swift in Sources */,
+				E01C7E0C1658D223F9AAF3C6 /* AppLinks.swift in Sources */,
+				0AFDCD3C0136EE490B73B5C0 /* AppSetup.swift in Sources */,
+				54304F37AD761097C7248255 /* AppTheme.swift in Sources */,
+				ECA69BADEE516E43816739F5 /* ChaoticFingersApp.swift in Sources */,
+				0723B67D20BD1947D0271926 /* FilledSegmentedPicker.swift in Sources */,
+				75A7CC27862645194EA9BDDC /* GestureDetector.swift in Sources */,
+				BB3C50539F013A2521E9C318 /* InputBlocker.swift in Sources */,
+				8CFBC6A105AC75FFAB4F4064 /* LandingView.swift in Sources */,
+				7D745325913A04168915D282 /* OnboardingView.swift in Sources */,
+				5706AC2BEC590D5FFF4664B9 /* SettingsView.swift in Sources */,
+				1194C3A534B65818B54ED762 /* StatusOverlayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA6D87E10150F36B7308775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547950194531752F14C11FB4 /* GestureLogic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C8B509028F344F2A5779CCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 944733581290E2A63C958DEE /* ChaoticFingersCore */;
+			targetProxy = 900D7C0CF3A532A65B376CAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2DE2F6DD0EE4BF41FC89084A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		566FA1A69D8958E154F74479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chaotic Fingers";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajeevranjan.ChaoticFingers;
+				PRODUCT_NAME = "Chaotic Fingers";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		63DBBECC15AD66FE0AC6FC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		74CBCA3CFD6F044E809ACFB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SG8NYPLMNY;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C91E6FA34D0FE06C4DC48B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SG8NYPLMNY;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D297C93D1F120FC33A3B9AD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chaotic Fingers";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajeevranjan.ChaoticFingers;
+				PRODUCT_NAME = "Chaotic Fingers";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A05B092B255E33A288930A3 /* Build configuration list for PBXProject "ChaoticFingers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C91E6FA34D0FE06C4DC48B4C /* Debug */,
+				74CBCA3CFD6F044E809ACFB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		44B582326EE006D5F2C10B82 /* Build configuration list for PBXNativeTarget "ChaoticFingers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				566FA1A69D8958E154F74479 /* Debug */,
+				D297C93D1F120FC33A3B9AD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B2998AB527DF540217F601DA /* Build configuration list for PBXNativeTarget "ChaoticFingersCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DE2F6DD0EE4BF41FC89084A /* Debug */,
+				63DBBECC15AD66FE0AC6FC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E058160575E1DEC971013F5 /* Project object */;
+}

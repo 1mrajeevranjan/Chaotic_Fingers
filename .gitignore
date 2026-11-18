@@ -4,3 +4,5 @@
 /Chaotic Fingers.app
 /*.dmg
 .swiftpm/
+/build
+xcuserdata/

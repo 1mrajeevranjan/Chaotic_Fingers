@@ -63,7 +63,7 @@ Nothing is recorded, stored, or transmitted. Input events are discarded, not ins
 | **OS** | macOS 14 Sonoma or later |
 | **Hardware** | Apple silicon or Intel (ships universal) |
 | **Permission** | Accessibility (required — see below) |
-| **To build** | Swift 5.9 toolchain; Xcode optional ([caveats](#building-from-source)) |
+| **To build** | Xcode 15 or later |
 
 ## Installation
 
@@ -88,8 +88,7 @@ xattr -cr "/Applications/Chaotic Fingers.app"
 ```bash
 git clone https://github.com/1mrajeevranjan/Chaotic-Fingers.git
 cd Chaotic-Fingers
-bash package.sh
-open "Chaotic Fingers.app"
+open ChaoticFingers.xcodeproj   # then ⌘R
 ```
 
 ## Accessibility permission
@@ -167,25 +166,15 @@ enum AppLinks {
 
 ## Building from source
 
+Open `ChaoticFingers.xcodeproj` and press ⌘R, or from the command line:
+
 ```bash
-swift build -c release
+xcodebuild -project ChaoticFingers.xcodeproj -scheme ChaoticFingers build
 ```
 
-> ### Building without Xcode
->
-> This package needs no Xcode — with one caveat. On a machine with only the Command Line Tools,
-> the newest SDK declares `@State`, `@AppStorage` and `#Preview` as macros whose plugins
-> (`SwiftUIMacros`, `PreviewsMacros`) ship **only inside Xcode**, so every build fails with
-> `plugin for module 'SwiftUIMacros' not found`.
->
-> Build against an SDK where they are still property wrappers:
->
-> ```bash
-> export SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk
-> swift build
-> ```
->
-> Installing Xcode removes the constraint entirely.
+Bundle id, version, signing team and hardened runtime live in the project — select the
+**ChaoticFingers** target and use **General** and **Signing & Capabilities**. `Info.plist` holds only
+the keys Xcode cannot generate (icon, Accessibility usage string).
 
 ## Tests
 
@@ -196,53 +185,51 @@ swift run SelfCheck
 35 assertions over the pure gesture and blocking logic in `ChaoticFingersCore` — modifier pair
 tracking, the failsafe key sequence, and the mode/gesture mapping.
 
-**Why not `swift test`?** XCTest and swift-testing both ship inside Xcode: `XCTest` fails to
-resolve as a module, and swift-testing compiles but dies at launch on a missing
-`Testing.framework`. `SelfCheck` is a plain executable that runs anywhere the package builds and
-exits non-zero on the first failure. If you have Xcode, adding a real test target on top of
-`ChaoticFingersCore` is straightforward.
+`Package.swift` exists only for this: it builds `ChaoticFingersCore` and `SelfCheck`, not the app.
+`SelfCheck` is a plain executable that exits non-zero on the first failure.
 
 ## Packaging and code signing
+
+### Distributing to other Macs (Developer ID + notarization)
+
+1. **Product → Archive** in Xcode.
+2. In the Organizer, **Distribute App → Direct Distribution**. Xcode signs with your
+   `Developer ID Application` certificate (creating it if your account is allowed to), submits to
+   Apple's notary service and staples the ticket.
+3. **Export** the notarized app, then wrap it in a DMG:
+
+```bash
+bash package.sh ~/Desktop/Chaotic\ Fingers.app
+```
+
+Requires a paid Apple Developer Program membership. The app uses an active `CGEvent` tap and
+Accessibility, so it cannot be sandboxed and is not a Mac App Store candidate.
+
+### Local builds
 
 ```bash
 bash package.sh
 ```
 
-Produces a universal `Chaotic Fingers.app` and `dist/ChaoticFingers-Installer.dmg`.
+Archives a universal Release build signed with the project's team (Apple Development) and writes
+`dist/ChaoticFingers-Installer.dmg`. Fine on your own Macs; Gatekeeper warns elsewhere.
 
-The script signs with the first `Developer ID Application` or `Apple Development` identity in your
-keychain. Override it:
-
-```bash
-CODESIGN_IDENTITY="Developer ID Application: Your Name (TEAMID)" bash package.sh
-```
-
-**This matters more than it looks.** An ad-hoc signature (`--sign -`) makes the app's designated
-requirement a bare `cdhash`, which changes on every build — so macOS treats each rebuild as a
-different app and the Accessibility grant has to be given again *every single time*. A real
-identity produces a requirement based on the bundle id plus the certificate:
+**Always sign with a real identity.** An ad-hoc signature makes the app's designated requirement a
+bare `cdhash`, which changes on every build — so macOS treats each rebuild as a different app and
+the Accessibility grant has to be given again *every single time*. A real identity produces a
+requirement based on the bundle id plus the certificate:
 
 ```
 designated => identifier "com.rajeev.ChaoticFingers" and anchor apple generic
               and certificate leaf[subject.CN] = "…"
 ```
 
-That is identical across rebuilds, so the grant sticks. With no identity available the script still
-works but falls back to ad-hoc and warns you.
-
-Clear stale entries left by earlier ad-hoc builds:
+That is identical across rebuilds, so the grant sticks — until the certificate changes (Apple
+Development → Developer ID), which needs one more grant. Clear stale entries:
 
 ```bash
 tccutil reset Accessibility com.rajeev.ChaoticFingers
 ```
-
-The script also stamps `LC_BUILD_VERSION` with `vtool`, because macOS selects window chrome
-(traffic light size, title bar metrics) from the SDK recorded in the binary rather than the
-deployment target. Without it the app renders legacy 12pt traffic lights beside every native
-window's 16pt ones.
-
-> An `Apple Development` certificate is fine on your own Mac. Distributing to *other* Macs without
-> warnings additionally requires a `Developer ID Application` certificate and notarization.
 
 ## Architecture
 
@@ -253,11 +240,10 @@ Views/             Dashboard, onboarding, status strip
 Theme/             Layout tokens, shared controls, appearance
 Utilities/         Permissions, outbound links, segmented control
 Tests/SelfCheck/   Assertion-based checks for ChaoticFingersCore
-package.sh         Universal build, signing, DMG
+ChaoticFingers.xcodeproj  App target + ChaoticFingersCore static library; all build settings
+Package.swift      ChaoticFingersCore + SelfCheck only, for `swift run SelfCheck`
+package.sh         Xcode archive → DMG
 ```
-
-Three SwiftPM targets: `ChaoticFingersCore` (library), `ChaoticFingers` (app), `SelfCheck`
-(test executable).
 
 A few decisions worth knowing before you change things:
 
@@ -288,8 +274,9 @@ Should not happen; the app re-enables taps that macOS disables on timeout. If it
 an issue with the mode and roughly how long it ran.
 
 **Gatekeeper blocks the app on another Mac**
-Expected unless it is signed with a Developer ID certificate and notarized. Right-click → **Open**,
-or `xattr -cr "/Applications/Chaotic Fingers.app"`.
+Expected unless it is signed with a Developer ID certificate and notarized — see
+[Distributing to other Macs](#distributing-to-other-macs-developer-id--notarization). For a local
+build, right-click → **Open**, or `xattr -cr "/Applications/Chaotic Fingers.app"`.
 
 ## Contributing
 
