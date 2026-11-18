@@ -137,7 +137,7 @@ quit the app outright. Quitting always releases the taps.
 
 | Shortcut | Action |
 |---|---|
-| <kbd>⇧⌘K</kbd> / <kbd>⇧⌘T</kbd> / <kbd>⇧⌘B</kbd> | Start keyboard / trackpad / both |
+| <kbd>⇧⌘K</kbd> / <kbd>⇧⌘T</kbd> / <kbd>⇧⌘B</kbd> | Start keyboard / trackpad / both (from any app) |
 | <kbd>⌘.</kbd> | Stop blocking |
 | <kbd>⌘0</kbd> | Open the dashboard |
 | <kbd>⌘,</kbd> | Settings |
